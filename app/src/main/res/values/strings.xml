@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Baking App</string>
+    <string name="recipes_url">https://go.udacity.com/android-baking-app-json</string>
+    <string name="recipe_ingredients_label">Recipe ingredients</string>
+    <string name="ingredients_label">Ingredients</string>
+    <string name="step_label">Step</string>
+    <string name="no_video_available">No video available</string>
+    <string name="previous_step">Previous step</string>
+    <string name="next_step">next step</string>
+    <string name="appwidget_text">Brownies</string>
+    <string name="add_widget">Add widget</string>
+    <string name="kitchen_closed">The kitchen is closed</string>
+    <string name="no_connection_message">Could not retrieve data from Internet</string>
+</resources>
