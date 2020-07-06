@@ -24,10 +24,11 @@
         android:layout_margin="8dp"
         android:layout_weight="4"
         android:background="#09C"
-        android:contentDescription="@string/appwidget_recipe_text"
+        android:contentDescription="@string/ingredients_label"
+        android:text="@string/ingredients_label"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold|italic"
-        tools:text="@string/appwidget_recipe_text" />
+        tools:text="@string/ingredients_label" />
 
 </LinearLayout>

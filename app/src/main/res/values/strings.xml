@@ -7,8 +7,12 @@
     <string name="no_video_available">No video available</string>
     <string name="previous_step">Previous step</string>
     <string name="next_step">next step</string>
-    <string name="appwidget_text">Brownies</string>
+    <string name="appwidget_recipe_text">Brownies</string>
     <string name="add_widget">Add widget</string>
     <string name="kitchen_closed">The kitchen is closed</string>
     <string name="no_connection_message">Could not retrieve data from Internet</string>
+    <string name="appwidget_text">Ingredients</string>
+    <string name="appwidget_ingredient_text">Sugar</string>
+    <string name="preference_recipe_id_key">recipe_id</string>
+    <string name="preference_recipe_name_key">recipe_name</string>
 </resources>

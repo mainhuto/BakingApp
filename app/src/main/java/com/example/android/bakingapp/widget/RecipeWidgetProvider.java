@@ -1,4 +1,4 @@
-package com.example.android.bakingapp;
+package com.example.android.bakingapp.widget;
 
 import android.annotation.TargetApi;
 import android.app.PendingIntent;
@@ -8,6 +8,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.widget.RemoteViews;
+
+import com.example.android.bakingapp.BuildConfig;
+import com.example.android.bakingapp.R;
+import com.example.android.bakingapp.RecipeActivity;
 
 import timber.log.Timber;
 

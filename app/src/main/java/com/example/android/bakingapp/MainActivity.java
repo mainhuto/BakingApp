@@ -12,6 +12,7 @@ import androidx.test.espresso.IdlingResource;
 import timber.log.Timber;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -22,9 +23,11 @@ import android.widget.TextView;
 
 import com.example.android.bakingapp.IdlingResource.SimpleIdlingResource;
 import com.example.android.bakingapp.model.Recipe;
+import com.example.android.bakingapp.widget.IngredientsUpdateService;
 
 import java.util.List;
 
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 import static com.example.android.bakingapp.RecipeDetailListFragment.ARG_RECIPE;
 
 public class MainActivity extends AppCompatActivity implements RecipeAdapter.RecipeAdapterOnClickHandler {
@@ -126,6 +129,14 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.Rec
     @Override
     public void onClick(Recipe recipe) {
         Timber.d("%s with id %d selected", recipe.getName(), recipe.getId());
+
+        SharedPreferences sharedPref = getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.preference_recipe_id_key), recipe.getId());
+        editor.putString(getString(R.string.preference_recipe_name_key), recipe.getName());
+        editor.apply();
+
+        IngredientsUpdateService.startActionUpdateIngredientsWidgets(this);
         Intent intent = new Intent(this, RecipeActivity.class);
         Bundle args = new Bundle();
         args.putParcelable(ARG_RECIPE, recipe);
